@@ -30,7 +30,7 @@ body {
   animation: load 0.8s ease infinite;
 }
 
-.loader .loading.one {
+.loader .loading.One {
   animation-delay: 0.3s;
 }
 .loader .loading.two {
