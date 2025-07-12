@@ -6,19 +6,290 @@ Advance-CSS-40-Projects
 This README contains **100 advanced CSS interview questions** with simple explanations and code examples. It is perfect for frontend developers who want to prepare for interviews or improve their CSS skills.
 
 ---
-
 ## ✅ 1–30: Flexbox, Grid, Positioning, and Basics
 
 ### 1. What is Flexbox?
-
 ```css
 display: flex;
 ```
 
-... (content for 1-50 remains unchanged) ...
+### 2. How to center items in Flexbox?
+```css
+display: flex;
+justify-content: center;
+align-items: center;
+```
+
+### 3. What is `flex-direction`?
+```css
+flex-direction: row; /* or column */
+```
+
+### 4. What is CSS Grid?
+```css
+display: grid;
+grid-template-columns: 1fr 1fr;
+```
+
+### 5. 3-column Grid Layout:
+```css
+grid-template-columns: repeat(3, 1fr);
+```
+
+### 6. What is `gap` in Grid?
+```css
+gap: 20px;
+```
+
+### 7. What is `z-index`?
+```css
+z-index: 10;
+```
+
+### 8. Absolute Positioning:
+```css
+position: absolute;
+top: 0;
+left: 0;
+```
+
+### 9. Sticky Position:
+```css
+position: sticky;
+top: 0;
+```
+
+### 10. Difference between `absolute` and `relative`:
+- `absolute`: out of normal flow
+- `relative`: in flow, moves using `top`, `left`
+
+### 11. Button Animation:
+```css
+button:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+```
+
+### 12. What is `@keyframes`?
+```css
+@keyframes slide {
+  from { left: 0; }
+  to { left: 100px; }
+}
+```
+
+### 13. Transform Example:
+```css
+transform: scale(1.2);
+```
+
+### 14. What is `transition`?
+```css
+transition: all 0.3s ease;
+```
+
+### 15. Hover Pseudo-class:
+```css
+a:hover {
+  color: red;
+}
+```
+
+### 16. `nth-child()` selector:
+```css
+li:nth-child(2) {
+  color: blue;
+}
+```
+
+### 17. Make Circle with CSS:
+```css
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+```
+
+### 18. Box Shadow:
+```css
+box-shadow: 0 0 10px gray;
+```
+
+### 19. Overflow:
+```css
+overflow: hidden;
+```
+
+### 20. Media Query:
+```css
+@media (max-width: 768px) {
+  body {
+    background: yellow;
+  }
+}
+```
+
+### 21. `vw` and `vh` units:
+- `vw`: 1% of screen width
+- `vh`: 1% of screen height
+
+### 22. Clamp for Responsive Font:
+```css
+font-size: clamp(1rem, 2vw, 2rem);
+```
+
+### 23. Object Fit:
+```css
+object-fit: cover;
+```
+
+### 24. Backdrop Filter:
+```css
+backdrop-filter: blur(10px);
+```
+
+### 25. Pseudo-elements:
+```css
+element::before {
+  content: "★";
+}
+```
+
+### 26. Pointer Events:
+```css
+pointer-events: none;
+```
+
+### 27. Responsive Font Size:
+```css
+font-size: clamp(14px, 2vw, 18px);
+```
+
+### 28. Calc Function:
+```css
+width: calc(100% - 50px);
+```
+
+### 29. Aspect Ratio:
+```css
+aspect-ratio: 16 / 9;
+```
+
+### 30. Hide Scrollbar:
+```css
+overflow: scroll;
+scrollbar-width: none; /* Firefox */
+::-webkit-scrollbar { display: none; } /* Chrome */
+```
+
+---
+
+## ✅ 31–100: More Advanced CSS Concepts
+
+### 31. `display: contents;` usage?
+```css
+display: contents; /* removes the element box but keeps its children */
+```
+
+### 32. How to create a gradient background?
+```css
+background: linear-gradient(to right, red, yellow);
+```
+
+### 33. How to blur an element using only CSS?
+```css
+filter: blur(5px);
+```
+
+### 34. What is `isolation: isolate` used for?
+> Creates a new stacking context.
+
+### 35. How to change scrollbar style?
+```css
+::-webkit-scrollbar {
+  width: 10px;
+  background: #ccc;
+}
+```
+
+### 36. How to limit text to 1 line with ellipsis?
+```css
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+```
+
+### 37. What is `will-change`?
+> Optimizes performance for animations.
+```css
+will-change: transform;
+```
+
+### 38. Difference between `em` and `rem`?
+- `em`: relative to parent
+- `rem`: relative to root (html)
+
+### 39. CSS variable example:
+```css
+:root {
+  --main-color: #3498db;
+}
+body {
+  color: var(--main-color);
+}
+```
+
+### 40. How to hide a checkbox but still use it?
+```css
+input[type="checkbox"] {
+  display: none;
+}
+```
+
+### 41. `:has()` selector usage?
+```css
+div:has(img) {
+  border: 1px solid green;
+}
+```
+
+### 42. How to style a disabled input?
+```css
+input:disabled {
+  background-color: #eee;
+}
+```
+
+### 43. What is `backface-visibility`?
+> Hides the back of an element during 3D transforms.
+
+### 44. What is `perspective` in 3D CSS?
+```css
+transform: perspective(1000px);
+```
+
+### 45. CSS-only dropdown menu?
+> Use `:hover` with `display: block;`
+
+### 46. What does `inherit` do?
+> Inherits value from parent element.
+
+### 47. What does `initial` do?
+> Resets to browser default value.
+
+### 48. CSS specificity order?
+> Inline > ID > Class > Tag
+
+### 49. How to select the last child?
+```css
+li:last-child {
+  color: red;
+}
+```
 
 ### 50. What is `clip-path`?
-
 ```css
 clip-path: circle(50%);
 ```
